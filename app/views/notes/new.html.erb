@@ -1,0 +1,49 @@
+<div>
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <strong>New Note</strong></div>
+                    <div class="card-body">
+
+                      <%= form_for @note do |f| %>
+                            
+
+                            <div class="form-group">
+                              <%= f.label :title, "Title:" %>
+                              <%= f.text_field :title, class: "form-control" %>
+                            </div>
+
+                    
+                             <div class="form-group">
+                              <%= f.label :body, "Description: " %>
+                              <%= f.text_area :body, rows: 8, class: "form-control" %>
+                            </div>
+
+
+                             <div class="form-group">
+                              <%= f.label :all_tags, "Tags:" %>
+                              <%= f.text_field :all_tags, class: "form-control" %>
+                            </div>
+
+                       
+                    </div>
+                    <div class="card-footer">
+                       
+                            <%= button_tag(type: "submit", class: "btn btn-sm btn-primary") do %>
+                                 <i class="fa fa-dot-circle-o"></i> Add
+                              <% end %> 
+
+
+                            <%= link_to '<i class="fa fa-ban"></i> Reset'.html_safe, new_note_path, class: "btn btn-sm btn-danger" %>
+                                  
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

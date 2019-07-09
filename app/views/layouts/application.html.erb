@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Involvio</title>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon-32x32.png' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show" data-notify-class="<%=flash[:rx_notify_class]%>" data-notify-message="<%=flash[:rx_notify_message]%>">
+    <header class="app-header navbar">
+        <%= render 'layouts/partials/header' %>
+    </header>
+
+    <div class='notify-board-update-active'></div>
+
+    <div class="app-body">
+      <div class="sidebar">
+        <%= render partial: 'layouts/partials/sidebar' %>
+      </div>
+
+
+      <main class="main">
+        <!-- Breadcrumb-->
+        <!-- <ol class="breadcrumb">
+        </ol> -->
+        <ol class="breadcrumb">
+          <% if @breadcrumbs.count > 1 %>
+            <% @breadcrumbs.each_with_index do |breadcrumb, inx| %>
+              <% if @breadcrumbs.size-1 != inx %>
+                <li class="breadcrumb-item"><%= link_to(breadcrumb[:name], breadcrumb[:url]) %></li>
+                <% else %>
+                <li class="breadcrumb-item active"><%= link_to(breadcrumb[:name], breadcrumb[:url]) %></li>
+              <% end %>
+            <% end %>
+          <% end %>
+        </ol>
+
+        <div class="container-fluid">
+          <div id="ui-view">
+            
+            <%= yield %>
+          </div>
+        </div>
+      </main>
+
+      <aside class="aside-menu">
+        <%#= render 'layouts/partials/activities' %>
+      </aside>
+    </div>
+
+    <footer class="app-footer">
+      <%= render 'layouts/partials/footer' %>
+    </footer>
+
+
+    <div class="modal fade" id="confirm" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Are you sure you want to delete?</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-primary" id="delete">Delete</button>
+            <button type="button" data-dismiss="modal" class="btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="laneNotEmpty" role="dialog" aria-labelledby="laneNotEmpty" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Lane is not empty. Please move all the cards to some other lane before continuing.</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="lastLane" role="dialog" aria-labelledby="lastLane" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Cannot delete the last remaining lane.</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="my-delete-modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Are you sure you want to delete the note ?</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-primary" id="delete">Delete</button>
+            <button type="button" data-dismiss="modal" class="btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= javascript_include_tag 'application' %>
+
+    <%= javascript_tag type: 'text/javascript' do -%>
+      <%= raw render 'layouts/partials/messages_js.coffee' %>
+    <% end %>
+
+  </body>
+</html>

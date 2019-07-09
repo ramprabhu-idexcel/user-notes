@@ -1,0 +1,27 @@
+<% for(var i = 0; i < attachments.length; i++) {%>
+  <div class="col-6 col-lg-6 file-content">
+    <div class="card  attachment-card">
+      <div class="card-body p-0 d-flex align-items-center attachment-body">
+        <!-- <i class="fa fa-cogs bg-primary p-4 font-2xl mr-3"></i> -->
+        <%= Task.fileThumbnail(attachments[i]) %>
+        <div class="file-metadata">
+          <div class=" text-primary">
+            <%= attachments[i].filename %>
+          </div>
+          <div class="text-muted text-uppercase font-weight-bold small">
+            <%= Math.round((attachments[i].filesize/1000) * 100) / 100 %> KB
+          </div>
+        </div>
+      </div>
+
+      <div class="trash-overlay">
+        <a href="<%= attachments[i].link %>" class="btn btn-primary pull-left attachment-link" title="Download" target="_blank">
+          <span><i class="fa fa-download"></i></span>
+        </a>
+        <a href="javascript:void(0);" data-id="<%= attachments[i].id %>" class="btn btn-danger pull-right delete-file-link ml-8" title="Delete">
+          <span><i class="icon-trash"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+<% } %>

@@ -1,0 +1,537 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+
+ *= require bootstrap/dist/css/bootstrap
+ *= require flag-icon-css/css/flag-icon.min.css
+ *= require font-awesome/css/font-awesome.min.css
+ *= require simple-line-icons/css/simple-line-icons.css
+ *= require coreui/style.css
+ *= require coreui/chart.css
+ *= require select2/dist/css/select2
+ *= require select2-bootstrap-theme/dist/select2-bootstrap
+ *= require x-editable/dist/bootstrap3-editable/css/bootstrap-editable
+ * require bootstrap-colorpicker/dist/css/bootstrap-colorpicker
+ *= require spectrum-colorpicker/spectrum
+ *= require jqueryui.min.css
+ *= require animate.css/animate
+ *= require bootstrap-suggest
+ *= require bootstrap4-editable/bootstrap-editable
+ *= require_self
+ */
+
+.main .container-fluid {
+ padding: 75px 15px 0px 15px !important;
+}
+
+body.board-activities-show footer {
+  margin-right: 250px;
+}
+
+.breadcrumb {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+.grid {
+  position: relative;
+}
+.item {
+  position: absolute;
+  z-index: 1;
+}
+.item.muuri-item-hidden {
+  z-index: 0;
+}
+.item.muuri-item-releasing {
+  z-index: 2;
+}
+.item.muuri-item-dragging {
+  z-index: 3;
+}
+
+.planning .card-header {
+  height: 61px !important;
+  vertical-align: middle;
+  cursor: move;
+}
+
+.planning .block-with-text {
+  overflow: hidden;
+}
+
+.vertical-align-middle {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.editable-buttons {
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.editableform .control-group.form-group.has-error {
+  display: block;
+}
+
+.editable-input textarea {
+  height: 6em;
+}
+
+.editable-cancel {
+  border: 1px solid #c8ced3;
+}
+
+a.editable-click, a.editable-click:hover {
+  border-bottom: none !important;
+}
+
+.margin-top-7 {
+  margin-top: 7px;
+}
+
+.editable-container.editable-inline {
+  width: 100% !important;
+}
+
+.editable-container.editable-inline div,
+.editable-container.editable-inline input,
+.editable-container.editable-inline textarea {
+  width: 100%;
+}
+
+.sp-preview {
+  width: 85% !important;
+}
+
+.sp-dd {
+  width: 10% !important;
+  float: right;
+}
+
+.input-group-addon {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555555;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.input-group-addon, .input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.input-group-addon, .input-group-btn, .input-group .form-control {
+  display: table-cell;
+}
+
+#show_task_popup .task-sidebar a,
+#show_task_popup .task-sidebar button.btn-light,
+#show_task_popup .task-sidebar button.btn-danger {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#show_task_popup .task-description,
+#show_task_popup .task-comment,
+#show_task_popup .task-assignee,
+#show_task_popup .task-due-date,
+#show_task_popup .task-priority,
+#show_task_popup .task-story-points,
+#show_task_popup .task-type,
+#show_task_popup .toggle-description {
+  width: 100%;
+}
+
+#show_task_popup .task-description.editable-pre-wrapped,
+#show_task_popup .task-comment.editable-pre-wrapped {
+  white-space: normal !important;
+}
+
+.pd-0 {
+  padding: 0rem;
+}
+
+.pd-1 {
+  padding: 1rem;
+}
+
+.pd-left-10 {
+  padding-left: 10px;
+}
+
+.pd-0-3 {
+  padding: 0.3rem;
+}
+
+.mt-1 {
+  margin-top: 1px;
+}
+
+.mt-6 {
+  margin-top: 6px !important;
+}
+
+.mb-0-5 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.shuffle-sort .mr-8 {
+  margin-right: 8px !important;
+}
+
+.shuffle-sort .mt-5 {
+  margin-top: 5px !important;
+}
+
+.control-group .mt-5 {
+  margin-top: 5px !important;
+}
+
+.fileinput-button {
+  width: 100%;
+}
+
+div.preview {
+  border: 1px solid #d6dadc;
+  background-color: #e2e4e6;
+  min-height: 72px;
+  min-width: 72px;
+  display: table;
+}
+
+div.preview span {
+  color: #838c91;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.select2-container.select2-container--bootstrap.select2-container--open {
+  z-index: 1062 !important;
+}
+
+
+.tile.is-dragging,
+/* Packery adds class while transitioning to drop position */
+.tile.is-positioning-post-drag {
+  background: #EA0;
+  z-index: 2; /* keep dragged item on top */
+}
+
+.tile .card-body {
+  height: 100px;
+}
+
+.packery-drop-placeholder {
+  outline: 3px dashed #444;
+  outline-offset: -6px;
+  /* transition position changing */
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
+
+.has-error {
+  border: 1px solid red;
+}
+
+.card-body.collapse .description {
+  height: 200px;
+}
+
+.card .card-header .title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-body.card-cursor {
+  cursor: move;
+}
+
+.card-cursor {
+  cursor: move;
+}
+
+.card .sprint-card {
+  cursor: move;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.col-sm-12.overflow-fix {
+  height: 29px !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.task-sidebar a[role='button'], .task-sidebar button, .fileinput-button {
+  text-align: left;
+}
+
+#show_task_popup .task-description, #show_task_popup .task-description:hover {
+  color: #2f353a !important;
+}
+
+.description-row .pale-yellow {
+  background-color: #ffffcc !important;
+}
+
+div.task-title a, div.task-title a:hover {
+  color: #2f353a !important;
+}
+
+div.task-title.pale-yellow a {
+  background-color: #ffffcc !important;
+}
+
+.description-row textarea {
+  height: 250px;
+}
+
+div.task-title {
+  margin: 4px 0 0 15px;
+  font-size: larger;
+  font-weight: 600;
+  width: 100%;
+}
+
+.user-details-label {
+  font-weight: 600;
+}
+
+.attachment-card .trash-overlay {
+  position: absolute;
+  top: 28%;
+  left: 32%;
+  display: none;
+  z-index: 1070;
+}
+
+.attachment-card .trash-overlay a {
+  border-bottom: none;
+}
+
+.attachment-card:hover .attachment-body {
+  opacity: 0.1;
+}
+
+.attachment-card:hover .trash-overlay {
+  display: block;
+}
+
+.attachment-card .file-metadata {
+  display: grid;
+}
+
+.py-0-3 {
+  padding-top: 0.3rem !important;
+}
+
+.comment-editable:hover {
+  cursor: pointer;
+}
+
+.comment-editable:hover p {
+  background-color: #ffffcc !important;
+}
+
+.comment .editable-container {
+  margin-top: -10px;
+  padding-left: 50px;
+}
+
+.message .trash-overlay {
+  position: absolute;
+  top: 15px;
+  right: 1%;
+}
+
+small.comment-content p:not(:first-child) {
+  margin-top: -50px;
+}
+
+small.comment-content p:first-child {
+  text-indent: 1px;
+  direction: rtl;
+  text-align: left;
+}
+
+.modal-header .task-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.file-metadata .text-primary {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#show_task_popup .task-description {
+  display: inline-block;
+}
+
+#show_task_popup .task-description.editable-empty, #show_task_popup .task-attachments.empty {
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.2) !important;
+  text-align: center;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#show_task_popup .task-attachments.empty, #show_task_popup .task-attachments.empty:hover {
+  text-decoration: none;
+  color: #2f353a !important;
+}
+
+#show_task_popup .task-attachments.empty:hover {
+  background-color: #ffffcc !important;
+}
+
+#show_task_popup .files {
+  margin-bottom: -20px;
+}
+
+.badge-darkred {
+  color: #fff;
+  background-color: darkred;
+}
+
+main {
+  padding-bottom: 10px;
+}
+
+.sidebar .nav-dropdown.open {
+  background: none;
+}
+
+.button-collapse {
+  width: 35px;
+}
+
+.panel-heading .fa {
+  transition: .3s transform ease-in-out;
+}
+
+.circle {
+  // border-radius: 50%;
+  // font-size: 20px;
+  // color: #fff;
+  // text-align: center;
+  // background: #000;
+  // padding: 5px 5px 5px 5px;
+
+  position: absolute;
+  top: 4px;
+  color: white;
+  background-color: red;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  line-height: 18px;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.red-font {
+  color: red;
+  font-size: 15px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+
+[data-notify="container"].alert-pastel {
+  border-width: 0px;
+  border-left: 15px solid;
+  border-radius: 0px;
+  box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
+  letter-spacing: 1px;
+}
+[data-notify="container"].alert-pastel > [data-notify="title"] {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+[data-notify="container"].alert-pastel > [data-notify="message"] {
+  font-weight: 400;
+}
+
+
+ .glyphicon-ok:before {
+        content: "\f00c";
+    }
+    .glyphicon-remove:before {
+        content: "\f00d";
+    }
+    .glyphicon {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }

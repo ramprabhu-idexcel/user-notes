@@ -1,0 +1,24 @@
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="input-group">
+        <select class="form-control watchers-search" id="watchers-search" >
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-10">
+    <div class="col-md-12">
+      <ul class="list-group watchers-list">
+        <% for(var i = 0; i < watchers.length; i++) {%>
+          <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+            <%= watchers[i].name %>
+            <a href="javascript:void(0);" class="watcher-remove" data-id="<%= watchers[i].id %>">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>

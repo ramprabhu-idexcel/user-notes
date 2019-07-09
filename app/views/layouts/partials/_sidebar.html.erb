@@ -1,0 +1,15 @@
+<nav class="sidebar-nav">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" id="dashboard_link" href="/">
+        <i class="icon-speedometer"></i> Dashboard
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <%= link_to '<i class="nav-icon icon-drop"></i> Notes'.html_safe, notes_path, class: 'nav-link' %>
+    </li>
+  </ul>
+</nav>
+
+<button class="sidebar-minimizer brand-minimizer" type="button"></button>

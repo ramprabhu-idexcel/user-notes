@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col">
+    <div class="card card-accent-primary">
+      <div class="card-header">
+        <i class="icon-briefcase"></i> Note
+      </div>
+      <div class="card-body">
+        <nav class="nav nav-pills nav-fill">
+        <div class="col-sm-3">
+          <h6>Title:</h6>
+        </div>
+        <div class="col-sm-9">
+          <span class="edit-team" data-underline="false" data-url="#" data-value="#" data-name="title" data-type="text" data-showbuttons="false">
+          <%= @note.title %>&nbsp;
+          </span>
+        </div>
+      </nav>
+      <hr>
+
+      <nav class="nav nav-pills nav-justified">
+        <div class="col-sm-3">
+          <h6>Body:</h6>
+        </div>
+        <div class="col-sm-8">
+          <span class="edit-team" data-underline="false" data-url="#" data-value="#" data-name="body" data-type="text" data-showbuttons="false">
+          <%= @note.body %>&nbsp;
+          </span>
+        </div>
+      </nav>
+      <hr>
+
+
+      <nav class="nav nav-pills nav-justified">
+        <div class="col-sm-3">
+          <h6>Tags:</h6>
+        </div>
+        <div class="col-sm-8">
+          <span class="edit-team" data-underline="false" data-url="#" data-value="#" data-name="body" data-type="text" data-showbuttons="false">
+          <%= @note.all_tags %>&nbsp;
+          </span>
+        </div>
+      </nav>
+      <hr>
+
+      <nav class="nav nav-pills nav-justified">
+        <div class="col-sm-3">
+          <h6>CreatedAt:</h6>
+        </div>
+        <div class="col-sm-8">
+          <span class="edit-team" data-underline="false" data-url="#" data-value="#" data-name="body" data-type="text" data-showbuttons="false">
+          <%= @note.created_at %>&nbsp;
+          </span>
+        </div>
+      </nav>
+      <hr>
+     
+      <%= link_to '<i class="fa fa-arrow-circle-left"></i> Back'.html_safe, notes_path, class: "btn btn-primary" %>
+
+      </div>
+    </div>
+  </div>
+</div>
+

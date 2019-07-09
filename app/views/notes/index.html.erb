@@ -1,0 +1,43 @@
+<%= link_to '<i class="fa fa-plus"></i> Add Note'.html_safe,  new_note_path, class:"btn btn-primary" %>
+<hr/>
+
+<div>
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-align-justify"></i> Notes </div>
+                    <div class="card-body">
+                        <table class="table table-responsive-sm table-bordered" id="notes">
+                            <thead>
+                                <tr>
+                                  <th>Title</th>
+                                  <th>Body</th>
+                                  <th>Tags</th>
+                                  <th>CreatedAt</th>
+                                  <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <% @notes.each do |note| %>
+                              <tr>
+                                  <td><%= note.title %></td>
+                                  <td><%= note.body %></td>
+                                  <td><%= note.all_tags %></td>
+                                  <td><%= note.created_at %></td>
+                                  <td>
+                                    <%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, note_path(note), class: "btn btn-sm btn-success" %>
+                                    <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, note_path(note), class: "btn btn-sm btn-danger", method: :delete,  data: {confirm: "Are you sure?"} %>
+                                  </td>
+                                </tr>
+                              <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

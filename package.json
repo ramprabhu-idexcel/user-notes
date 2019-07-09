@@ -1,0 +1,44 @@
+{
+  "name": "Involvio",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "build:test": "NODE_ENV=test webpack --config webpack.config.js",
+    "build:production": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:development": "NODE_ENV=development webpack -w --config webpack.config.js"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "@coreui/coreui": "^2.0.0-beta.4",
+    "@coreui/plugin-chartjs-custom-tooltips": "0.0.1",
+    "animate.css": "^3.5.2",
+    "bootstrap": "4.1.0",
+    "bootstrap-datepicker": "^1.8.0",
+    "bootstrap-duallistbox": "^3.0.6",
+    "bootstrap-notify": "^3.1.3",
+    "bootstrap-tree-view": "^1.8.0",
+    "chart.js": "^2.6.0",
+    "chosen-js": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "datatables.net": "^1.10.15",
+    "datatables.net-bs": "^1.10.15",
+    "datatables.net-buttons": "^1.3.1",
+    "datatables.net-buttons-bs": "^1.3.1",
+    "datatables.net-responsive": "^2.1.1",
+    "flag-icon-css": "3.0.0",
+    "font-awesome": "^4.7.0",
+    "select2": "^4.0.6-rc.1",
+    "select2-bootstrap-theme": "^0.1.0-beta.10",
+    "webpack": "^4.5.0",
+    "webpack-manifest-plugin": "^2.0.0-rc.2",
+    "x-editable": "^1.5.1",
+    "simple-line-icons": "2.4.1",
+    "spectrum-colorpicker": "^1.8.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
